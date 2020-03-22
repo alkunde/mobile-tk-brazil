@@ -1,12 +1,11 @@
-// src/pages/index.js
+// src/pages/404.js
 import React from 'react';
 import Layout from '../components/Layout';
-import 'minireset.css';
 
 export default () => (
   <Layout>
     <p>
-      Página inicial
+      Infelizmente a página desejada não pode ser encontrada!
     </p>
   </Layout>
 );
