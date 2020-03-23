@@ -1,42 +1,23 @@
 // src/pages/index.js
-import React, { Component } from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
-import Posts from '../components/Posts';
-import 'minireset.css';
 
-export default class Index extends Component {
-  render() {
-    const { data } = this.props;
-    return (
-      <Layout>
-        <Posts data={data} />
-      </Layout>
-    )
-  }
-};
+export default ({ data }) => (
+  <Layout title={data.site.siteMetadata.title}>
+    <p>
+      {data.site.siteMetadata.description}
+    </p>
+  </Layout>
+);
 
-export const pageQuery = graphql`
+export const query = graphql`
   query {
-    allMarkdownRemark(
-      limit: 2000
-      sort: {fields: [fields___prefix], order: DESC}
-      filter: { frontmatter: { draft: { ne: true } } }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          timeToRead
-          frontmatter {
-            title
-            tags
-            date(formatString: "DD/MM/YYYY")
-            description
-          }
-        }
+    site {
+      siteMetadata {
+        title
+        description
       }
     }
   }
-`;
+`

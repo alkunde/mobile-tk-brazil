@@ -1,2 +1,2 @@
-// src/components/Layout/index.js
+// src/components/Header/index.js
 export { default } from './Header';
