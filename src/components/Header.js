@@ -67,12 +67,12 @@ export default class Header extends Component {
           >
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <a className="nav-link" href="https://apps.apple.com/br/developer/mobile-tk-brazil/id1513436336">
+                <a className="nav-link" href="https://minhasdespesas.page.link/app-store">
                   App Store
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="https://play.google.com/store/apps/dev?id=8954460297502125590">
+                <a className="nav-link" href="https://minhasdespesas.page.link/play-store">
                   Google Play
                 </a>
               </li>
